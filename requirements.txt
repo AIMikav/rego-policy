@@ -1,0 +1,8 @@
+# Minimal requirements for Simple Policy Generator
+streamlit>=1.28.0
+python-dotenv>=1.0.0
+
+# LLM providers (install only what you need)
+google-generativeai>=0.3.0
+openai>=1.0.0
+anthropic>=0.7.0

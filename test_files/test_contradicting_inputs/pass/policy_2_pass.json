@@ -1,0 +1,29 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "labeled-pod",
+          "labels": {
+            "app.kubernetes.io/name": "my-app",
+            "app.kubernetes.io/instance": "my-app-1",
+            "app.kubernetes.io/version": "1.0.0",
+            "app.kubernetes.io/component": "frontend",
+            "app.kubernetes.io/part-of": "my-system",
+            "app.kubernetes.io/managed-by": "kustomize"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "app",
+              "image": "nginx:1.20"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "invalid-registry-pod"
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "app",
+              "image": "unknown-registry.com/myorg/myapp:1.0.0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

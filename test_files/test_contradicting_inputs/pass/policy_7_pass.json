@@ -1,0 +1,18 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "valid-labels-pod",
+          "labels": {
+            "app.kubernetes.io/name": "my-app",
+            "app.kubernetes.io/version": "1.0.0",
+            "company.com/team": "backend"
+          }
+        }
+      }
+    }
+  }
+}

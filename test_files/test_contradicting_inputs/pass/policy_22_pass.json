@@ -1,0 +1,28 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "managed-pod",
+          "ownerReferences": [
+            {
+              "apiVersion": "apps/v1",
+              "kind": "Deployment",
+              "name": "app-deployment"
+            }
+          ]
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "app",
+              "image": "nginx:1.20"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

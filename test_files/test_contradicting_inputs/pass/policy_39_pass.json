@@ -1,0 +1,21 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "valid-pod"
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "app",
+              "image": "nginx:1.20"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

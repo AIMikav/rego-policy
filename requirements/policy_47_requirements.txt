@@ -1,0 +1,3 @@
+Violation: Deployment has PersistentVolumeClaim but no matching PVC found
+
+Deployments that use persistentVolumeClaim in their spec.template.spec.volumes must have a corresponding v1:PersistentVolumeClaim resource in the same namespace with matching claimName.

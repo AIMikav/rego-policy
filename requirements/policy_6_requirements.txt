@@ -1,0 +1,3 @@
+Violation: Container does not set Java Xmx option
+
+Red Hat OpenJDK image uses CONTAINER_MAX_MEMORY env via the downward API to set Java memory settings. Instead of manually setting -Xmx, let the image automatically set it for you. This applies to workload resources: core/Pod, core/ReplicationController, apps/DaemonSet, apps/Deployment, apps/Job, apps/ReplicaSet, apps/StatefulSet, apps.openshift.io/DeploymentConfig, batch/CronJob.

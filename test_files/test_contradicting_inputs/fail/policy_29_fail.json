@@ -1,0 +1,24 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "BuildConfig",
+        "metadata": {
+          "name": "invalid-buildconfig"
+        },
+        "spec": {
+          "source": {
+            "type": "Git",
+            "git": {
+              "uri": "https://github.com/example/app.git"
+            }
+          },
+          "strategy": {
+            "type": "Docker"
+          }
+        }
+      }
+    }
+  }
+}

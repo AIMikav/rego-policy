@@ -1,0 +1,3 @@
+Violation: BuildConfig uses deprecated JenkinsPipelineStrategy
+
+BuildConfigs must not use the deprecated 'spec.strategy.jenkinsPipelineStrategy'. This strategy is deprecated in OpenShift 4.3. Use Jenkinsfiles directly on Jenkins or OpenShift Pipelines instead.

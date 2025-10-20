@@ -1,0 +1,3 @@
+Violation: Pod replica below 1
+
+Never run a single Pod individually. Pods should be managed by controllers like Deployments, StatefulSets, or DaemonSets to ensure fault tolerance and high availability. See: Fault tolerance -> https://learnk8s.io/production-best-practices#application-development

@@ -1,0 +1,3 @@
+Violation: Container has secret mounted as environment variable
+
+Containers must not have secrets mounted as environment variables. Secrets are meant to be secret, and mounting them as environment variables is not a good practice. Use volume mounts instead for secret management.

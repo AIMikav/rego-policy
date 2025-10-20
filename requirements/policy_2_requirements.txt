@@ -1,0 +1,3 @@
+Violation: Required Kubernetes recommended labels are missing
+
+All pod and networking resources must have the required Kubernetes recommended labels in metadata.labels: app.kubernetes.io/name, app.kubernetes.io/instance, app.kubernetes.io/version, app.kubernetes.io/component, app.kubernetes.io/part-of, app.kubernetes.io/managed-by. See: https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels

@@ -1,0 +1,3 @@
+Violation: Pod hostNetwork not set
+
+Pods which require 'spec.hostNetwork' should be limited due to security concerns. Host network access bypasses network isolation and should be avoided to maintain proper network security boundaries.

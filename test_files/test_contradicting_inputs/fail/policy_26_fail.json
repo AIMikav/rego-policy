@@ -1,0 +1,20 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "route.openshift.io/v1",
+        "kind": "Route",
+        "metadata": {
+          "name": "insecure-route"
+        },
+        "spec": {
+          "host": "example.com",
+          "to": {
+            "kind": "Service",
+            "name": "my-service"
+          }
+        }
+      }
+    }
+  }
+}

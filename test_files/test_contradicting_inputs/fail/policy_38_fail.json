@@ -1,0 +1,20 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "authorization.openshift.io/v1",
+        "kind": "Role",
+        "metadata": {
+          "name": "deprecated-role"
+        },
+        "rules": [
+          {
+            "apiGroups": [""],
+            "resources": ["pods"],
+            "verbs": ["get", "list"]
+          }
+        ]
+      }
+    }
+  }
+}

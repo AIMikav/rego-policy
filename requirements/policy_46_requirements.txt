@@ -1,0 +1,3 @@
+Violation: Deployment does not have a matching PodDisruptionBudget
+
+Deployments must have a matching policy/v1:PodDisruptionBudget with selector labels that match the deployment's pod template labels. See: https://kubernetes.io/docs/tasks/run-application/configure-pdb/#specifying-a-poddisruptionbudget

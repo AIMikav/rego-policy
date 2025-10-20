@@ -1,0 +1,21 @@
+{
+  "input": {
+    "items": [
+      {
+        "apiVersion": "v1",
+        "kind": "Namespace",
+        "metadata": {
+          "name": "quota-namespace"
+        }
+      },
+      {
+        "apiVersion": "v1",
+        "kind": "ResourceQuota",
+        "metadata": {
+          "name": "compute-quota",
+          "namespace": "quota-namespace"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "input": {
+    "items": [
+      {
+        "apiVersion": "v1",
+        "kind": "Namespace",
+        "metadata": {
+          "name": "insecure-namespace"
+        }
+      },
+      {
+        "apiVersion": "v1",
+        "kind": "Service",
+        "metadata": {
+          "name": "some-service"
+        }
+      }
+    ]
+  }
+}

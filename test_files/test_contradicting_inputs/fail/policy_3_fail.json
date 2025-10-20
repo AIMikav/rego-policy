@@ -1,0 +1,35 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "java-app-pod-missing-env",
+          "labels": {
+            "redhat-cop.github.com/technology": "java"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "java-app",
+              "image": "openjdk:11",
+              "resources": {
+                "limits": {
+                  "memory": "512Mi"
+                }
+              },
+              "env": [
+                {
+                  "name": "OTHER_VAR",
+                  "value": "some-value"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "apps.openshift.io/v1",
+        "kind": "DeploymentConfig",
+        "metadata": {
+          "name": "app-deployment"
+        },
+        "spec": {
+          "replicas": 1,
+          "triggers": [
+            {
+              "type": "ConfigChange"
+            }
+          ],
+          "template": {
+            "spec": {
+              "containers": [
+                {
+                  "name": "app",
+                  "image": "nginx:1.20"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

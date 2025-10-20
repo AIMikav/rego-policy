@@ -1,0 +1,27 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "pod-with-cpu-limits"
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "app",
+              "image": "nginx:1.20",
+              "resources": {
+                "limits": {
+                  "cpu": "500m",
+                  "memory": "128Mi"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

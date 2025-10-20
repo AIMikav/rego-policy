@@ -1,0 +1,25 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "metadata": {
+          "name": "good-deployment"
+        },
+        "spec": {
+          "template": {
+            "spec": {
+              "containers": [
+                {
+                  "name": "app",
+                  "image": "nginx:1.20"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

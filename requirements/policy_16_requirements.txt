@@ -1,0 +1,3 @@
+Violation: Container memory request exceeds upper limit
+
+Container memory requests must not exceed the upper limit of 2Gi. The policy checks that memory requests (when not using variable substitution with $) are within the acceptable range. This helps prevent excessive memory allocation and ensures proper resource planning in the cluster.

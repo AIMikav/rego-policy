@@ -1,0 +1,27 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "build.openshift.io/v1",
+        "kind": "BuildConfig",
+        "metadata": {
+          "name": "invalid-buildconfig-with-deprecated-strategy"
+        },
+        "spec": {
+          "source": {
+            "type": "Git",
+            "git": {
+              "uri": "https://github.com/example/app.git"
+            }
+          },
+          "strategy": {
+            "type": "JenkinsPipeline",
+            "jenkinsPipelineStrategy": {
+              "jenkinsfile": "pipeline { ... }"
+            }
+          }
+        }
+      }
+    }
+  }
+}

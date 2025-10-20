@@ -1,0 +1,23 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "rbac.authorization.k8s.io/v1",
+        "kind": "RoleBinding",
+        "metadata": {
+          "name": "invalid-rolebinding"
+        },
+        "roleRef": {
+          "kind": "Role",
+          "name": "pod-reader"
+        },
+        "subjects": [
+          {
+            "kind": "User",
+            "name": "jane"
+          }
+        ]
+      }
+    }
+  }
+}

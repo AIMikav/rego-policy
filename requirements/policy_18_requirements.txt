@@ -1,0 +1,3 @@
+Violation: Container volume mount path is not consistent
+
+Container volume mount paths must follow consistent naming conventions. A good practice is to use consistent mount paths, such as: /var/run/{organization}/{mount} - i.e.: /var/run/io.redhat-cop/my-secret. This ensures predictable and organized volume mounting across applications.

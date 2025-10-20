@@ -1,0 +1,3 @@
+Violation: ProjectRequest no longer served by v1
+
+ProjectRequest resources must use the correct API version. OCP4.x expects project.openshift.io/v1 instead of the deprecated v1 API version.

@@ -1,0 +1,35 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "pod-with-expected-layers"
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "app",
+              "image": "nginx:1.20",
+              "imageHistory": [
+                {
+                  "id": "sha256:expected-layer-1"
+                },
+                {
+                  "id": "sha256:expected-layer-2"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "parameters": {
+    "expectedLayers": [
+      "sha256:expected-layer-1",
+      "sha256:expected-layer-2"
+    ]
+  }
+}

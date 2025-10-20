@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opa
+  namespace: opa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opa
+  template:
+    metadata:
+      labels:
+        app: opa
+    spec:
+      containers:
+      - name: opa
+        image: openpolicyagent/opa:0.52.0
+        imagePullPolicy: Always
+        command: ["/opa"]
+        args:
+          - "run"
+          - "--server"
+          - "--addr=0.0.0.0:8181"
+          - "--diagnostic-addr=0.0.0.0:8282"
+          - "--set=plugins.enable_decision_logs=true"
+          - "--set=decision_logs.console=true"
+        ports:
+        - containerPort: 8181
+          name: http
+        - containerPort: 8282
+          name: grpc
+        livenessProbe:
+          httpGet:
+            path: /health?plugins
+            port: 8181
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /health?plugins
+            port: 8181
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
+          requests:
+            cpu: 200m
+            memory: 256Mi

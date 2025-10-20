@@ -1,0 +1,25 @@
+{
+  "input": {
+    "review": {
+      "kind": "BuildConfig",
+      "object": {
+        "apiVersion": "build.openshift.io/v1",
+        "kind": "BuildConfig",
+        "metadata": {
+          "name": "valid-buildconfig"
+        },
+        "spec": {
+          "source": {
+            "type": "Git",
+            "git": {
+              "uri": "https://github.com/example/app.git"
+            }
+          },
+          "strategy": {
+            "type": "Docker"
+          }
+        }
+      }
+    }
+  }
+}

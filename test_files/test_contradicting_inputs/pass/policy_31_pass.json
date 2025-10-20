@@ -1,0 +1,18 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "image.openshift.io/v1",
+        "kind": "ImageStream",
+        "metadata": {
+          "name": "valid-imagestream"
+        },
+        "spec": {
+          "lookupPolicy": {
+            "local": false
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+Violation: Route has TLS Termination not defined
+
+Routes must have TLS termination configured. All route traffic should be encrypted using TLS to ensure secure communication between clients and services.

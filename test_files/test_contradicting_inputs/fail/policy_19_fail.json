@@ -1,0 +1,33 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "test-pod-without-mounts"
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "app-container",
+              "image": "nginx"
+            }
+          ],
+          "volumes": [
+            {
+              "name": "unused-volume",
+              "emptyDir": {}
+            },
+            {
+              "name": "another-unused-volume",
+              "configMap": {
+                "name": "unused-config"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

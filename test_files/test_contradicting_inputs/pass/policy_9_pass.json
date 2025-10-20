@@ -1,0 +1,28 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "pod-with-liveness-probe"
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "app",
+              "image": "nginx:1.20",
+              "livenessProbe": {
+                "httpGet": {
+                  "path": "/health",
+                  "port": 8080
+                },
+                "initialDelaySeconds": 30
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

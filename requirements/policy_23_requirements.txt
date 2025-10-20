@@ -1,0 +1,3 @@
+Violation: Pod replica is not odd
+
+Pods should be run with a replica which is odd, i.e.: 3, 5, 7, etc, for HA guarantees. Odd numbers of replicas ensure proper quorum and high availability in distributed systems.

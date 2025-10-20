@@ -1,0 +1,26 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "metadata": {
+          "name": "app-deployment-odd-replicas"
+        },
+        "spec": {
+          "replicas": 3,
+          "template": {
+            "spec": {
+              "containers": [
+                {
+                  "name": "app",
+                  "image": "nginx:1.20"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

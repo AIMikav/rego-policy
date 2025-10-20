@@ -1,0 +1,3 @@
+Violation: RoleBinding no longer served by v1
+
+RoleBinding resources must use the correct API version. OCP4.x expects rbac.authorization.k8s.io/v1 instead of the deprecated v1 API version.

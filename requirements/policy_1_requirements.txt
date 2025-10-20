@@ -1,0 +1,3 @@
+Violation: Namespace does not have a ResourceQuota
+
+Namespaces must have at least one core/v1:ResourceQuota. The policy checks for the presence of ResourceQuota resources in the same manifest set as the namespace. See: https://docs.openshift.com/container-platform/4.6/applications/quotas/quotas-setting-per-project.html

@@ -1,0 +1,13 @@
+{
+  "input": {
+    "items": [
+      {
+        "apiVersion": "v1",
+        "kind": "Namespace",
+        "metadata": {
+          "name": "no-quota-namespace"
+        }
+      }
+    ]
+  }
+}

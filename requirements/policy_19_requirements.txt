@@ -1,0 +1,3 @@
+Violation: Volume does not have a volumeMount in any container
+
+Pod volumes must have corresponding volumeMounts in at least one container. All defined volumes should be properly mounted to ensure they serve their intended purpose and are not orphaned.

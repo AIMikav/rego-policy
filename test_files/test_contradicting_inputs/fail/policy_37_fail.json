@@ -1,0 +1,28 @@
+{
+  "input": {
+    "review": {
+      "kind": "BuildConfig",
+      "object": {
+        "apiVersion": "build.openshift.io/v1",
+        "kind": "BuildConfig",
+        "metadata": {
+          "name": "invalid-buildconfig-with-deprecated-field"
+        },
+        "spec": {
+          "source": {
+            "type": "Git",
+            "git": {
+              "uri": "https://github.com/example/app.git"
+            }
+          },
+          "strategy": {
+            "type": "Custom",
+            "customStrategy": {
+              "exposeDockerSocket": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

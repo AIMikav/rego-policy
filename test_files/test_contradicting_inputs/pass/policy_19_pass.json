@@ -1,0 +1,43 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "test-pod-with-volumes"
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "app-container",
+              "image": "nginx",
+              "volumeMounts": [
+                {
+                  "name": "config-volume",
+                  "mountPath": "/etc/config"
+                },
+                {
+                  "name": "data-volume",
+                  "mountPath": "/var/data"
+                }
+              ]
+            }
+          ],
+          "volumes": [
+            {
+              "name": "config-volume",
+              "configMap": {
+                "name": "app-config"
+              }
+            },
+            {
+              "name": "data-volume",
+              "emptyDir": {}
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "metadata": {
+          "name": "java-app-with-xmx"
+        },
+        "spec": {
+          "template": {
+            "spec": {
+              "containers": [
+                {
+                  "name": "java-app",
+                  "image": "openjdk:11",
+                  "args": ["-Xmx512m", "-jar", "app.jar"]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

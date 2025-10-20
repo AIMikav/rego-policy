@@ -1,0 +1,21 @@
+{
+  "input": {
+    "items": [
+      {
+        "apiVersion": "v1",
+        "kind": "Namespace",
+        "metadata": {
+          "name": "secure-namespace"
+        }
+      },
+      {
+        "apiVersion": "networking.k8s.io/v1",
+        "kind": "NetworkPolicy",
+        "metadata": {
+          "name": "default-deny",
+          "namespace": "secure-namespace"
+        }
+      }
+    ]
+  }
+}

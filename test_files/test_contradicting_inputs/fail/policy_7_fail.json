@@ -1,0 +1,18 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "invalid-labels-pod",
+          "labels": {
+            "app": "my-app",
+            "version": "1.0.0",
+            "team": "backend"
+          }
+        }
+      }
+    }
+  }
+}

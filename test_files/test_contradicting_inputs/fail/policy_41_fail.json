@@ -1,0 +1,17 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "operators.coreos.com/v2",
+        "kind": "CatalogSourceConfig",
+        "metadata": {
+          "name": "deprecated-catalog-source-config-v2"
+        },
+        "spec": {
+          "targetNamespace": "my-namespace",
+          "packages": "my-package"
+        }
+      }
+    }
+  }
+}

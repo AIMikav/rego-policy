@@ -1,0 +1,35 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "pod-with-invalid-mounts"
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "app",
+              "image": "nginx:1.20",
+              "volumeMounts": [
+                {
+                  "name": "config-volume",
+                  "mountPath": "/etc/config"
+                }
+              ]
+            }
+          ],
+          "volumes": [
+            {
+              "name": "config-volume",
+              "configMap": {
+                "name": "app-config"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

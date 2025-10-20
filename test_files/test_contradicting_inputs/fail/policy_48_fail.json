@@ -1,0 +1,54 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "metadata": {
+          "name": "app-deployment-no-service",
+          "namespace": "default"
+        },
+        "spec": {
+          "replicas": 1,
+          "template": {
+            "metadata": {
+              "labels": {
+                "app": "my-app",
+                "version": "v1"
+              }
+            },
+            "spec": {
+              "containers": [
+                {
+                  "name": "app",
+                  "image": "nginx:1.20"
+                }
+              ]
+            }
+          }
+        },
+        "items": [
+          {
+            "apiVersion": "v1",
+            "kind": "Service",
+            "metadata": {
+              "name": "other-service",
+              "namespace": "default"
+            },
+            "spec": {
+              "selector": {
+                "app": "other-app"
+              },
+              "ports": [
+                {
+                  "port": 80,
+                  "targetPort": 8080
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

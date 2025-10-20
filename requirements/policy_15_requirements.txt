@@ -1,0 +1,3 @@
+Violation: Container CPU resource requests have incorrect unit
+
+Container CPU resource requests must use correct units. Valid CPU units are: "m" (millicores) or "" (whole cores). The policy checks that CPU requests are either numeric values or use the "m" suffix for millicores. See: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#resource-units-in-kubernetes

@@ -1,0 +1,3 @@
+Violation: Deployment has ServiceAccountName but no matching ServiceAccount
+
+Deployments that specify spec.template.spec.serviceAccountName must have a corresponding v1:ServiceAccount resource in the same namespace with matching metadata.name.

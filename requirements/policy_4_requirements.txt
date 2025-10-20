@@ -1,0 +1,3 @@
+Violation: Container image is set to latest tag
+
+Container images must not use the 'latest' tag. The policy checks for containers with images ending in ':latest' in Pods, Deployments, and DeploymentConfigs. All container images should use specific version tags to ensure reproducible deployments and proper version control.

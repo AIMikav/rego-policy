@@ -1,0 +1,18 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "ImageStream",
+        "metadata": {
+          "name": "invalid-imagestream"
+        },
+        "spec": {
+          "lookupPolicy": {
+            "local": false
+          }
+        }
+      }
+    }
+  }
+}

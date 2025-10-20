@@ -1,0 +1,21 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "valid-registry-pod"
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "app",
+              "image": "quay.io/myorg/myapp:1.0.0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

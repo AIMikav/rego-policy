@@ -1,0 +1,28 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "pod-with-readiness-probe"
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "app",
+              "image": "nginx:1.20",
+              "readinessProbe": {
+                "httpGet": {
+                  "path": "/ready",
+                  "port": 8080
+                },
+                "initialDelaySeconds": 5
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

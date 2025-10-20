@@ -1,0 +1,3 @@
+Violation: BuildConfig exposeDockerSocket deprecated
+
+BuildConfig resources must not use the deprecated 'spec.strategy.customStrategy.exposeDockerSocket' field. This feature is no longer supported by BuildConfig. See: https://docs.openshift.com/container-platform/4.1/release_notes/ocp-4-1-release-notes.html#ocp-41-deprecated-features

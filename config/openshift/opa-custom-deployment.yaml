@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opa
+  namespace: opa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opa
+  template:
+    metadata:
+      labels:
+        app: opa
+    spec:
+      containers:
+      - name: opa
+        image: alpine:latest
+        command: ["/bin/sh"]
+        args:
+          - -c
+          - |
+            apk add --no-cache curl
+            curl -L -o /usr/local/bin/opa https://openpolicyagent.org/downloads/v0.65.0/opa_linux_arm64_static
+            chmod +x /usr/local/bin/opa
+            /usr/local/bin/opa run --server --addr=0.0.0.0:8181 --diagnostic-addr=0.0.0.0:8282
+        ports:
+        - containerPort: 8181
+          name: http
+        - containerPort: 8282
+          name: grpc
+        livenessProbe:
+          httpGet:
+            path: /health?plugins
+            port: 8181
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /health?plugins
+            port: 8181
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
+          requests:
+            cpu: 200m
+            memory: 256Mi

@@ -1,0 +1,3 @@
+Violation: DeploymentConfig triggers container name mismatch
+
+If you are using a DeploymentConfig with 'spec.triggers' set, but the container name does not match the trigger will never fire. There is probably a mistake in your definition. Ensure container names in triggers match the actual container names in the pod template.

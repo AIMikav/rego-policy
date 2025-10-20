@@ -1,0 +1,3 @@
+Violation: RoleBinding has apiGroup not set
+
+RoleBinding resources must have the 'roleRef.apiGroup' field set. Migrating from OpenShift 3.11 to 4.x requires the 'roleRef.apiGroup' to be set for proper RBAC configuration.

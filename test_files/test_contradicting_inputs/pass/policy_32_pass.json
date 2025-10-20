@@ -1,0 +1,16 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "project.openshift.io/v1",
+        "kind": "ProjectRequest",
+        "metadata": {
+          "name": "valid-project-request"
+        },
+        "spec": {
+          "displayName": "My Project"
+        }
+      }
+    }
+  }
+}

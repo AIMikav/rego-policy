@@ -1,0 +1,24 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "pod-with-large-image"
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "app",
+              "image": "very-long-image-name-that-exceeds-size-limit"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "parameters": {
+    "image_size_upperbound": 10
+  }
+}

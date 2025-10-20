@@ -1,0 +1,3 @@
+Violation: Container memory limit exceeds upper limit
+
+Container memory limits must not exceed the upper limit of 6Gi. The policy checks that memory limits (when not using variable substitution with $) are within the acceptable range to prevent excessive memory allocation.

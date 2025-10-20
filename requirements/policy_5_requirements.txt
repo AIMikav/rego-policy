@@ -1,0 +1,3 @@
+Violation: Container image is not from a known registry
+
+Container images must be pulled from known, trusted registries. The policy checks if the registry (extracted from the image URL) is in the list of known registries: ["image-registry.openshift-image-registry.svc", "registry.redhat.io", "registry.connect.redhat.com", "quay.io"]. Images from unknown or untrusted registries should be rejected for security reasons.

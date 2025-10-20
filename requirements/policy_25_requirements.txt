@@ -1,0 +1,3 @@
+Violation: RoleBinding has kind not set
+
+RoleBinding resources must have the 'roleRef.kind' field set. Migrating from OpenShift 3.11 to 4.x requires the 'roleRef.kind' to be set for proper RBAC configuration.

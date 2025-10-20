@@ -1,0 +1,16 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "automationbroker.io/v1alpha1",
+        "kind": "ServiceInstance",
+        "metadata": {
+          "name": "deprecated-service-instance"
+        },
+        "spec": {
+          "clusterServiceClassExternalName": "my-service"
+        }
+      }
+    }
+  }
+}

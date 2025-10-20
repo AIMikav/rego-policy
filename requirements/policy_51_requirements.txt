@@ -1,0 +1,3 @@
+Violation: PodmanHistory did not find expected SHA layer
+
+PodmanHistory resources must contain expected layer IDs in their image history. The policy checks that the image history contains all expected SHA layer IDs specified in the parameters.

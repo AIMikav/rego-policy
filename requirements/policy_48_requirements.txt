@@ -1,0 +1,3 @@
+Violation: Deployment does not have a matching Service
+
+Deployments must have a corresponding v1:Service with selector labels that match the deployment's pod template labels. See: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#service-and-replicationcontroller

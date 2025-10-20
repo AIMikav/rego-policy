@@ -1,0 +1,3 @@
+Violation: Namespace does not have a NetworkPolicy
+
+Namespaces must have at least one networking.k8s.io/v1:NetworkPolicy. The policy checks for the presence of NetworkPolicy resources in the same manifest set as the namespace. See: https://docs.openshift.com/container-platform/4.6/networking/network_policy/about-network-policy.html

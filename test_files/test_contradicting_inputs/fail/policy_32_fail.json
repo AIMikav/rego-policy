@@ -1,0 +1,16 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "ProjectRequest",
+        "metadata": {
+          "name": "invalid-project-request"
+        },
+        "spec": {
+          "displayName": "My Project"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "pod-with-valid-cpu-request"
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "app",
+              "image": "nginx:1.20",
+              "resources": {
+                "requests": {
+                  "cpu": "100m"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "pod-with-secret-env"
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "app",
+              "image": "nginx:1.20",
+              "env": [
+                {
+                  "name": "DB_PASSWORD",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "db-secret",
+                      "key": "password"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

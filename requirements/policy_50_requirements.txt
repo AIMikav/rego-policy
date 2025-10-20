@@ -1,0 +1,3 @@
+Violation: Service does not have a matching ServiceMonitor
+
+Services must have a corresponding monitoring.coreos.com/v1:ServiceMonitor with selector labels that match the service's spec.selector. See: https://docs.openshift.com/container-platform/4.6/monitoring/enabling-monitoring-for-user-defined-projects.html

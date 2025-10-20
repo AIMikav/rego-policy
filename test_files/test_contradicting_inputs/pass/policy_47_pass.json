@@ -1,0 +1,27 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "metadata": {
+          "name": "valid-deployment",
+          "namespace": "default"
+        },
+        "spec": {
+          "replicas": 1,
+          "template": {
+            "spec": {
+              "containers": [
+                {
+                  "name": "app",
+                  "image": "nginx:1.20"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

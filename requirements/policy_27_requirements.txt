@@ -1,0 +1,3 @@
+Violation: Pod anti-affinity not set
+
+Pods must have anti-affinity rules configured for high availability. Anti-affinity rules ensure that pod replicas are distributed across different nodes, improving fault tolerance and preventing single points of failure.

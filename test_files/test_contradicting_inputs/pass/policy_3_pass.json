@@ -1,0 +1,39 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "java-app-pod",
+          "labels": {
+            "redhat-cop.github.com/technology": "java"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "java-app",
+              "image": "openjdk:11",
+              "resources": {
+                "limits": {
+                  "memory": "512Mi"
+                }
+              },
+              "env": [
+                {
+                  "name": "CONTAINER_MAX_MEMORY",
+                  "valueFrom": {
+                    "resourceFieldRef": {
+                      "resource": "limits.memory"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

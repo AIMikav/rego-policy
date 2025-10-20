@@ -1,0 +1,3 @@
+Violation: Image size is not greater than an expected value
+
+PodmanImages must not exceed the specified image size upper bound limit. Typically, the "smaller the better" rule applies to images so let's enforce that. The policy uses the parameter image_size_upperbound (integer) to define the maximum allowed image size.

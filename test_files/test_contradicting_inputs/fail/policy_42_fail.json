@@ -1,0 +1,17 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "operators.coreos.com/v1",
+        "kind": "OperatorSource",
+        "metadata": {
+          "name": "deprecated-operator-source"
+        },
+        "spec": {
+          "type": "appregistry",
+          "endpoint": "https://quay.io/cnr"
+        }
+      }
+    }
+  }
+}

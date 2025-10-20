@@ -1,0 +1,3 @@
+Violation: DeploymentConfig has no triggers set
+
+DeploymentConfigs must have triggers configured. If no triggers are needed, consider using a native Kubernetes Deployment instead. See: https://kubernetes.io/docs/concepts/workloads/controllers/deployment

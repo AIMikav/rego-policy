@@ -1,0 +1,3 @@
+Violation: Container has CPU limits set
+
+Containers should not have CPU limits set. It is not recommended to limit CPU as it can cause throttling issues. See: https://www.reddit.com/r/kubernetes/comments/all1vg/on_kubernetes_cpu_limits

@@ -1,0 +1,25 @@
+{
+  "kubernetes": {
+    "objects": [
+      {
+        "apiVersion": "monitoring.coreos.com/v1",
+        "kind": "ServiceMonitor",
+        "metadata": {
+          "name": "app-service-monitor",
+          "namespace": "default"
+        },
+        "spec": {
+          "selector": {
+            "app": "my-app",
+            "version": "v1"
+          },
+          "endpoints": [
+            {
+              "port": "http"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

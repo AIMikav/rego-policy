@@ -1,0 +1,3 @@
+Violation: Label key is not consistent
+
+Label keys should be qualified by 'app.kubernetes.io' or 'company.com' to allow a consistent understanding. All label keys must follow consistent naming conventions for proper organization and management.

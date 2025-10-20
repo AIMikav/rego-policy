@@ -1,0 +1,38 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "metadata": {
+          "name": "app-deployment",
+          "namespace": "default"
+        },
+        "spec": {
+          "replicas": 1,
+          "template": {
+            "spec": {
+              "serviceAccountName": "default",
+              "containers": [
+                {
+                  "name": "app",
+                  "image": "nginx:1.20"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "resolvedObjects": [
+        {
+          "apiVersion": "v1",
+          "kind": "ServiceAccount",
+          "metadata": {
+            "name": "default",
+            "namespace": "default"
+          }
+        }
+      ]
+    }
+  }
+}

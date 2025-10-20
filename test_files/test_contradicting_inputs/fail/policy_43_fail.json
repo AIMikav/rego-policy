@@ -1,0 +1,16 @@
+{
+  "input": {
+    "review": {
+      "object": {
+        "apiVersion": "osb.openshift.io/v1",
+        "kind": "AutomationBroker",
+        "metadata": {
+          "name": "deprecated-automation-broker"
+        },
+        "spec": {
+          "brokerName": "my-broker"
+        }
+      }
+    }
+  }
+}
